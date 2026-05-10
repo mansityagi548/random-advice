@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --neon-green: hsl(150, 100%, 66%);
+    --light-cyan: hsl(193, 38%, 86%);
+    /* --grayish-blue: hsl(217, 19%, 38%); */
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+    --neon-green-glow: hsl(150, 100%, 66%, 0.5);
+}
+
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-family: "Manrope", sans-serif;
+    background: var(--dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.container{
+    position: relative;
+    border-radius: 15px;
+    align-items: center;
+    height: auto;
+    max-width: 28.1rem;
+    background-color: var(--dark-grayish-blue);
+    padding: 3rem;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.count{
+    color: var(--neon-green);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    margin-bottom: 1.5rem; 
+}
+
+#times{
+    letter-spacing: 0;
+}
+
+.advice-wise{
+    text-align: center;
+    font-weight: 800;
+    color: var(--light-cyan);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;  
+}
+
+.pattern{
+    width: 100%;
+  width: 21.8rem;
+  margin-bottom: 2rem;
+  pointer-events: none;
+}
+
+.roll-dice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+   bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    height: 3.12rem;
+    width: 3.12rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--neon-green);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.roll-dice:hover {
+    box-shadow: 0 0 30px var(--neon-green);
+}
+
+
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 90vw;
+        width: 90vw;
+        padding: 2rem 1.5rem;
+        border-radius: 12px;
+    }
+
+    .count {
+        font-size: 1.1rem;                      
+        letter-spacing: 0.15rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .advice-wise {
+        font-size: 1.3rem;  
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+        letter-spacing: 0.15rem;
+    }
+
+    .pattern {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .roll-dice {
+        height: 2.8rem;
+        width: 2.8rem;
+    }
+
+    .roll-dice img {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .container {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .advice-wise {
+        font-size: 1rem;
+    }
+
+    .count {
+        font-size: 0.7rem;
+    }
+}
